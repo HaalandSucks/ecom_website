@@ -21,6 +21,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       success: true,
+      orderId: data.id,
       order: data,
     });
   } catch (err) {
