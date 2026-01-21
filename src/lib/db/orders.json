@@ -1,0 +1,244 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "test@example.com",
+      "address": "123 Test Street",
+      "city": "Test City",
+      "pinCode": "123456",
+      "subtotal": 5798,
+      "shipping": 0,
+      "total": 5798,
+      "items": [
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "M",
+          "color": "Midnight",
+          "price": 2899,
+          "quantity": 1
+        },
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "M",
+          "color": "Floral",
+          "price": 2899,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-20T12:21:59.440Z"
+    },
+    {
+      "id": 2,
+      "firstName": "Aditya",
+      "lastName": "Sharma",
+      "email": "aditya@example.com",
+      "address": "123 Tech Lane",
+      "city": "Pune",
+      "pinCode": "411001",
+      "subtotal": 2899,
+      "shipping": 0,
+      "total": 2899,
+      "items": [
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "M",
+          "color": "Floral",
+          "price": 2899,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-20T12:23:03.136Z"
+    },
+    {
+      "id": 3,
+      "firstName": "Virat",
+      "lastName": "Sharma",
+      "email": "viratsh@gmail.com",
+      "address": "Hotel Girdhar, Plot No 5 Colony Rani Pur",
+      "city": "Haridwar",
+      "pinCode": "249407",
+      "subtotal": 2998,
+      "shipping": 0,
+      "total": 2998,
+      "items": [
+        {
+          "productId": "p_men_oxford_shirt",
+          "productName": "Men’s Oxford Shirt",
+          "size": "M",
+          "color": "Sky Blue",
+          "price": 1799,
+          "quantity": 1
+        },
+        {
+          "productId": "p_women_cotton_top",
+          "productName": "Women’s Cotton Top",
+          "size": "L",
+          "color": "Rose",
+          "price": 1199,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-20T12:31:00.033Z"
+    },
+    {
+      "id": 4,
+      "firstName": "indrajit",
+      "lastName": "joshi",
+      "email": "ij@gmail.com",
+      "address": "Hotel J, Mumbai",
+      "city": "Mumbai",
+      "pinCode": "400064",
+      "subtotal": 6997,
+      "shipping": 0,
+      "total": 6997,
+      "items": [
+        {
+          "productId": "p_men_oxford_shirt",
+          "productName": "Men’s Oxford Shirt",
+          "size": "S",
+          "color": "Sky Blue",
+          "price": 1799,
+          "quantity": 1
+        },
+        {
+          "productId": "p_men_relaxed_denim",
+          "productName": "Men’s Relaxed Denim Jeans",
+          "size": "M",
+          "color": "Charcoal",
+          "price": 2499,
+          "quantity": 1
+        },
+        {
+          "productId": "p_women_wide_leg",
+          "productName": "Women’s Wide-Leg Trousers",
+          "size": "M",
+          "color": "Taupe",
+          "price": 2699,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-20T12:36:05.592Z"
+    },
+    {
+      "id": 5,
+      "firstName": "Aditya",
+      "lastName": "Kakar",
+      "email": "viratsh@gmail.com",
+      "address": "602, Jai Bharat CHS LTD, Off Yari Road, Opp Amarnath Tower",
+      "city": "Mumbai",
+      "pinCode": "400061",
+      "subtotal": 1799,
+      "shipping": 99,
+      "total": 1898,
+      "items": [
+        {
+          "productId": "p_men_oxford_shirt",
+          "productName": "Men’s Oxford Shirt",
+          "size": "M",
+          "color": "Sky Blue",
+          "price": 1799,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-20T12:37:14.154Z"
+    },
+    {
+      "id": 6,
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "test@example.com",
+      "address": "123 Test St",
+      "city": "Test City",
+      "pinCode": "123456",
+      "subtotal": 2899,
+      "shipping": 0,
+      "total": 2899,
+      "items": [
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "M",
+          "color": "Floral",
+          "price": 2899,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-21T06:40:03.703Z"
+    },
+    {
+      "id": 7,
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "test@example.com",
+      "address": "123 Test St",
+      "city": "Test City",
+      "pinCode": "123456",
+      "subtotal": 2899,
+      "shipping": 0,
+      "total": 2899,
+      "items": [
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "M",
+          "color": "Floral",
+          "price": 2899,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-21T06:42:03.156Z"
+    },
+    {
+      "id": 8,
+      "firstName": "kushi",
+      "lastName": "Test",
+      "email": "ij@gmail.com",
+      "address": "101",
+      "city": "Mumbai",
+      "pinCode": "400061",
+      "subtotal": 2899,
+      "shipping": 0,
+      "total": 2899,
+      "items": [
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "S",
+          "color": "Floral",
+          "price": 2899,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-21T06:54:17.488Z"
+    },
+    {
+      "id": 9,
+      "firstName": "kushi",
+      "lastName": "Test",
+      "email": "ij@gmail.com",
+      "address": "101",
+      "city": "Mumbai",
+      "pinCode": "400061",
+      "subtotal": 2899,
+      "shipping": 0,
+      "total": 2899,
+      "items": [
+        {
+          "productId": "p_women_wrap_dress",
+          "productName": "Women’s Wrap Dress",
+          "size": "S",
+          "color": "Floral",
+          "price": 2899,
+          "quantity": 1
+        }
+      ],
+      "createdAt": "2026-01-21T06:55:32.300Z"
+    }
+  ],
+  "nextId": 10
+}
