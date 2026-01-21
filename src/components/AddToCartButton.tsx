@@ -4,17 +4,19 @@ import { useState } from "react";
 import type { Product } from "@/lib/products";
 import { useCartContext } from "@/components/CartProvider";
 
+type AddToCartButtonProps = {
+  product: Product;
+  className?: string;
+  size?: string;
+  color?: string;
+};
+
 export function AddToCartButton({
   product,
   className,
-  size,
-  color,
-}: {
-  product: Product;
-  className?: string;
-  size: string;
-  color: string;
-}) {
+  size = "default",
+  color = "default",
+}: AddToCartButtonProps) {
   const cart = useCartContext();
   const [added, setAdded] = useState(false);
 
@@ -32,4 +34,3 @@ export function AddToCartButton({
     </button>
   );
 }
-
