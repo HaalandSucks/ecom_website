@@ -1,71 +1,32 @@
-import { NextRequest, NextResponse } from "next/server";
-import { createOrder, type OrderData } from "@/lib/db/db";
+import { NextResponse } from "next/server";
+import { supabase } from "@/lib/supabase";
 
-export async function POST(request: NextRequest) {
-    try {
-        const body = await request.json();
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
 
-        // Validate required fields
-        if (
-            !body.firstName ||
-            !body.lastName ||
-            !body.email ||
-            !body.address ||
-            !body.city ||
-            !body.pinCode ||
-            typeof body.subtotal !== "number" ||
-            typeof body.shipping !== "number" ||
-            typeof body.total !== "number" ||
-            !Array.isArray(body.items) ||
-            body.items.length === 0
-        ) {
-            return NextResponse.json(
-                { error: "Missing or invalid required fields" },
-                { status: 400 }
-            );
-        }
+    const { data, error } = await supabase
+      .from("orders")
+      .insert({
+        items: body.items,
+        total: body.total,
+      })
+      .select()
+      .single();
 
-        // Validate items
-        for (const item of body.items) {
-            if (
-                !item.productId ||
-                !item.productName ||
-                !item.size ||
-                !item.color ||
-                typeof item.price !== "number" ||
-                typeof item.quantity !== "number"
-            ) {
-                return NextResponse.json(
-                    { error: "Invalid item data" },
-                    { status: 400 }
-                );
-            }
-        }
-
-        const orderData: OrderData = {
-            firstName: body.firstName,
-            lastName: body.lastName,
-            email: body.email,
-            address: body.address,
-            city: body.city,
-            pinCode: body.pinCode,
-            subtotal: body.subtotal,
-            shipping: body.shipping,
-            total: body.total,
-            items: body.items,
-        };
-
-        const orderId = createOrder(orderData);
-
-        return NextResponse.json(
-            { success: true, orderId },
-            { status: 201 }
-        );
-    } catch (error) {
-        console.error("Error creating order:", error);
-        return NextResponse.json(
-            { error: "Failed to create order" },
-            { status: 500 }
-        );
+    if (error) {
+      console.error(error);
+      throw error;
     }
+
+    return NextResponse.json({
+      success: true,
+      order: data,
+    });
+  } catch (err) {
+    return NextResponse.json(
+      { success: false, message: "Order creation failed" },
+      { status: 500 }
+    );
+  }
 }
